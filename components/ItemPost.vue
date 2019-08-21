@@ -20,9 +20,9 @@
       },
     },
     methods: {
-      statusElement(status) {
-        status = !status
-        this.$emit('currentClick', status)
+      statusElement(checkShow) {
+        checkShow = !checkShow
+        this.$emit('currentClick', checkShow)
       }
     }
   }

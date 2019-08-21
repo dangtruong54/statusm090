@@ -21,8 +21,8 @@ export default {
     }
   },
   methods: {
-    clickParent(clickChild) {
-      this.currentClick = clickChild
+    clickParent(checkShow) {
+      this.currentClick = checkShow
     }
   }
 }
