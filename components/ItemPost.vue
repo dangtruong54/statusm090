@@ -18,11 +18,15 @@
       checkShow: {
         type: Boolean
       },
+      title: {
+        type: String
+      }
     },
     methods: {
       statusElement(checkShow) {
         checkShow = !checkShow
         this.$emit('currentClick', checkShow)
+        this.$emit('update:title', "Tieu de post")
       }
     }
   }

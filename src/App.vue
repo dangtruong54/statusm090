@@ -3,7 +3,7 @@
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
-    <ItemPost :check-show="currentClick" @currentClick="clickParent($event)"/>
+    <ItemPost :check-show="currentClick" :title.sync="titleInParent" @currentClick="clickParent($event)"/>
   </div>
 </template>
 
@@ -17,14 +17,16 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      currentClick: true
+      currentClick: true,
+      titleInParent: ''
     }
   },
   methods: {
     clickParent(checkShow) {
       this.currentClick = checkShow
+      console.log(this.titleInParent)
     }
-  }
+  },
 }
 </script>
 
